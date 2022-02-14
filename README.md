@@ -7,7 +7,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Buy us a tree][ico-treeware-gifting]][link-treeware-gifting]
 
-A [TrackingMore][] driver for ParcelTrap
+A [TrackingMore][link-trackingmore] driver for ParcelTrap
 
 ## Install
 
@@ -87,6 +87,7 @@ Read more about Treeware at [treeware.earth][link-treeware].
 [ico-downloads]: https://img.shields.io/packagist/dt/parceltrap/driver-trackingmore.svg?style=flat-square
 [ico-treeware-gifting]: https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen?style=flat-square
 
+[link-trackingmore]: https://trackingmore.com
 [link-packagist]: https://packagist.org/packages/parceltrap/driver-trackingmore
 [link-github-actions]: https://github.com/parceltrap/driver-trackingmore/actions
 [link-styleci]: https://styleci.io/repos/459130960
