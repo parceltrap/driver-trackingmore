@@ -34,10 +34,8 @@ it('can call `find` on the TrackingMore driver', function () {
     ];
 
     $httpMockHandler = new MockHandler([
-        new Response(200, ['X-Foo' => 'Bar'], json_encode([
-            'data' => [
-                $trackingDetails,
-            ],
+        new Response(200, ['Content-Type' => 'application/json'], json_encode([
+            'data' => [$trackingDetails],
         ])),
     ]);
 
