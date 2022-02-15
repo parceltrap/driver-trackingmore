@@ -46,12 +46,11 @@ class TrackingMore implements Driver
 
         assert(isset($json['tracking_number']), 'The identifier is missing from the response');
         assert(isset($json['delivery_status']), 'The status is missing from the response');
-        assert(isset($json['status_info']), 'The summary is missing from the response');
 
         return new TrackingDetails(
             identifier: $json['tracking_number'],
             status: $this->mapStatus($json['delivery_status']),
-            summary: $json['status_info'],
+            summary: $json['status_info'] ?? null,
             estimatedDelivery: isset($json['scheduled_delivery_date']) ? new DateTimeImmutable($json['scheduled_delivery_date']) : null,
             events: [],
             raw: $json,
