@@ -6,7 +6,6 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Request;
 use ParcelTrap\DTOs\TrackingDetails;
 use ParcelTrap\Enums\Status;
 use ParcelTrap\ParcelTrap;
