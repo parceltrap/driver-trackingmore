@@ -36,7 +36,7 @@ Add the following to your `config/parceltrap.php` configuration file:
 
 ```php
 'trackingmore' => [
-    'client_id' => env('PARCELTRAP_TRACKINGMORE_API_KEY'),
+    'api_key' => env('PARCELTRAP_TRACKINGMORE_API_KEY'),
     'driver' => ParcelTrap\TrackingMore\TrackingMore::class,
 ],
 ```
