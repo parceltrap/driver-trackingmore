@@ -22,7 +22,7 @@ class TrackingMoreServiceProvider extends ServiceProvider
 
             return new TrackingMore(
                 /** @phpstan-ignore-next-line */
-                apiKey: (string) $config->get('parceltrap.trackingmore.api_key'),
+                apiKey: (string) $config->get('parceltrap.drivers.trackingmore.api_key'),
             );
         });
     }
