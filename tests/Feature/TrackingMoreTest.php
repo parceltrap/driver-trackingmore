@@ -16,12 +16,12 @@ it('can add the TrackingMore driver to ParcelTrap', function () {
     /** @var ParcelTrap $client */
     $client = $this->app->make(Factory::class);
 
-    $client->extend('royal_mail_other', fn () => new TrackingMore(
+    $client->extend('trackingmore_other', fn () => new TrackingMore(
         apiKey: 'abcdefg'
     ));
 
     expect($client)->driver(TrackingMore::IDENTIFIER)->toBeInstanceOf(TrackingMore::class)
-        ->and($client)->driver('royal_mail_other')->toBeInstanceOf(TrackingMore::class);
+        ->and($client)->driver('trackingmore_other')->toBeInstanceOf(TrackingMore::class);
 });
 
 it('can retrieve the TrackingMore driver from ParcelTrap', function () {

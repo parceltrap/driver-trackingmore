@@ -56,8 +56,7 @@ class TrackingMore implements Driver
         return match ($status) {
             'pending' => Status::Pending,
             'notfound' => Status::Not_Found,
-            'transit' => Status::In_Transit,
-            'pickup' => Status::In_Transit,
+            'transit', 'pickup' => Status::In_Transit,
             'delivered' => Status::Delivered,
             'undelivered' => Status::Failure,
             default => Status::Unknown,
