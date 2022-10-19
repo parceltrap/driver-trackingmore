@@ -35,7 +35,10 @@ class TrackingMore implements Driver
         /** @var array $json */
         $json = json_decode($request->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
-        assert(isset($json['code']) && $json['code'] < 400, $json['message'] ?? 'An unknown error occurred');
+        assert(
+            isset($json['code']) && ($json['code'] !== 203 && $json['code'] < 400),
+            $json['message'] ?? 'An unknown error occurred'
+        );
         assert(isset($json['data']) && $json['data'] !== null, 'No data was set on the response');
         assert(isset($json['data'][0]), 'No shipment could be found with this id');
         $json = $json['data'][0];
