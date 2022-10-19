@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## Unreleased
 
+## v1.0.2 - 2022-10-19
+
+### Fixed
+- Add additional assertions for error responses ([ca73feb](https://github.com/parceltrap/driver-trackingmore/commit/ca73feb35f647c8d451c38372ca0941a36721c4d))
+
 ## v1.0.1 - 2022-10-05
 
 ### Fixed
