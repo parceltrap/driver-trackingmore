@@ -14,13 +14,13 @@ use ParcelTrap\Enums\Status;
 
 class TrackingMore implements Driver
 {
-    public const IDENTIFIER = 'trackingmore';
+    public const string IDENTIFIER = 'trackingmore';
 
-    public const BASE_URI = 'https://api.trackingmore.com';
+    public const string BASE_URI = 'https://api.trackingmore.com';
 
     private ClientInterface $client;
 
-    public function __construct(private readonly string $apiKey, ?ClientInterface $client = null)
+    public function __construct(private readonly string $apiKey, ClientInterface|null $client = null)
     {
         $this->client = $client ?? GuzzleFactory::make(['base_uri' => self::BASE_URI]);
     }
@@ -48,9 +48,9 @@ class TrackingMore implements Driver
 
         return new TrackingDetails(
             identifier: $json['tracking_number'],
-            status: $this->mapStatus($json['delivery_status']),
             summary: $json['status_info'] ?? null,
             estimatedDelivery: isset($json['scheduled_delivery_date']) ? new DateTimeImmutable($json['scheduled_delivery_date']) : null,
+            status: $this->mapStatus($json['delivery_status']),
             events: [],
             raw: $json,
         );
